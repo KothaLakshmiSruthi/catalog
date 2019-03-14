@@ -1,0 +1,59 @@
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+  <!-- {% for flf in glg %}
+    <a href="{{ url_for('showCars',flfid=flf.id)}}">{{flf.name}}</a><br>
+    {% endfor %} -->
+    {% with messages = get_flashed_messages() %}
+	    {% if messages %}
+	        <div class="alert alert-success alert-dismissable animated fadeIn">
+	            {% for message in messages %}
+	            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	            <p class="h4"><strong>{{ message }}</strong></p>
+	            {% endfor %}
+	        </div>
+	    {% endif %}
+	{% endwith %}
+
+
+	<div class="w3-content w3-section" style="max-width:500px;">
+
+		<img class="mySlides w3-animate-fading" src="https://i.pinimg.com/originals/01/36/a5/0136a5718baec7ec6232233a48a92659.jpg" style="width: 720px; height: 500px;border-radius:40px;">
+ 
+		<center><img class="mySlides w3-animate-fading" 
+		src="https://carimages.com.au/myPmF7v5W_Y4JjmMavS69p0LNV0=/fit-in/930x620/filters:stretch(FFFFFF)/editorial/116234/2017-lamborghini-terzo-millenio-concept-140.jpg" style="width: 720px; height: 500px;border-radius:40px">
+		
+		<img class="mySlides w3-animate-fading" 
+		src="https://wallpapercave.com/wp/TzT7CFA.jpg" style="width: 720px; height: 500px;border-radius:40px">
+		
+		<img class="mySlides w3-animate-fading" 
+		src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/a8919.jpg?itok=qTMYTQ3N" style="width: 720px; height: 500px;border-radius:40px">
+		
+		<img class="mySlides w3-animate-fading" 
+		src="https://robbreportedit.files.wordpress.com/2016/09/01-barclay-buteras-nautical-dawn1.jpg" style="width: 720px; height: 500px;border-radius:40px">
+
+</div>
+<script> 
+	var myIndex = 0; 
+	carousel(); 
+	function carousel() 
+	{ 
+		var i; 
+		var x = document.getElementsByClassName("mySlides"); 
+		for (i = 0; i < x.length; i++) 
+		{
+			x[i].style.display = "none";
+		} 
+		myIndex++; 
+		if (myIndex > x.length)
+		{
+			myIndex = 1
+		}
+		x[myIndex-1].style.display = "block"; 
+		setTimeout(carousel, 3000); 
+	} 
+</script>
+	
+    
+{% endblock content %}
+</div>

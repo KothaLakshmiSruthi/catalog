@@ -1,0 +1,23 @@
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+    
+<center>
+	<div class="">
+		<div style="width: 500px;">
+			
+		
+			<div class="panel panel-primary" style="margin: 20px;">
+				<center><div class="panel-heading"style="background-color:#cc0052;">ADD Car Brand Name</div>
+				<div class="panel-body">
+					<form class="form-inline" action="{{ url_for('addCarBrand')}}" method="POST">
+						  <label for="email" class="mr-sm-2">Enter Car Brand Name:</label>
+						  <input type="text" class="form-control mb-2 mr-sm-2" name="name" placeholder="Enter Car Brand Name" required><br><br>
+						  <input style="background-color:#cc0052"type="submit" class="btn btn-primary mb-2" 
+						  value="Add Brand">
+					</form>
+				</div>
+			</div>	
+		</div>	
+	</div>
+{% endblock content %}

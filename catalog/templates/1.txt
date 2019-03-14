@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+h1, p { 
+text-align: center; 
+color: red; 
+font-size:20px; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>Hello World!</h1> 
+<h2>paragraph</h2> 
+<p>type selector.</p> 
+</body> 
+</html>
+ 

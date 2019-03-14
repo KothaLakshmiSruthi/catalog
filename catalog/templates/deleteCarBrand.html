@@ -1,0 +1,21 @@
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+<center>    
+	<div class="">
+		<div class="d-flex justify-content-center">
+			<div class="card" style="width: 38rem;">
+		<form action="{{url_for('deleteCarBrand',flfid=flf.id)}}" method="POST">
+			<div class="card-body bg-info">
+				<h3 style="background-color:#999999;color:#003366;margine:10%;margin-top:30%"class="card-text">Are you sure you want to delete {{flf.name}}</h3>
+			</div>
+			<div class="card-footer d-flex justify-content-center">
+				<input type="submit" class="btn btn-danger" value="Delete" style="margin-right: 10px;color:black;background-color:#cc0052">
+			    <button style="background-color:#bbff99"type="button" class="btn btn-warning"><a style="color:black;"href="http://localhost:2222/home">Cancel</a></button>
+			</div>
+			
+		</form>
+			</div>
+		</div>
+	</div>
+	{% endblock content %}
